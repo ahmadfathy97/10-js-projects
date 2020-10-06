@@ -8,7 +8,7 @@
     <div class="result">
       <iframe
         :srcdoc="srcDoc"
-        sandbox="allow-scripts"
+        sandbox="allow-scripts allow-modals allow-forms allow-same-origin	"
         frameBorder="0"
         width="100%"
         height=""></iframe>
@@ -34,29 +34,24 @@ export default {
   },
   methods:{
     update(obj){
-      if(obj.lang === 'xml') this.xml = obj.code
-      if(obj.lang === 'css') this.css = obj.code
-      if(obj.lang === 'javascript') this.javascript = obj.code
-      this.srcDoc = `
-      <html>
-        <head>
-          <style>${this.css}</style>
-        </head>
-        <body>
-          ${this.xml}
-          <script>${this.javascript}</script>
-          // there is an error here the iframe doesn't accept scrpt tag :(
-        </body>
-      </html>
-      `
+      let timeout = setTimeout(()=>{
+        if(obj.lang === 'xml') this.xml = obj.code
+        if(obj.lang === 'css') this.css = obj.code
+        if(obj.lang === 'javascript') this.javascript = obj.code
+        this.srcDoc = `
+        <html>
+          <head>
+            <style>${this.css}</style>
+          </head>
+          <body>
+            ${this.xml}
+          </body>
+          <script>${this.javascript}<\/script>
+        </html>
+        `;
+      },300)
+      return ()=> clearTimeout(timeout);
     }
-    // ,
-    // waitSec(obj){
-    //   let timeout = setTimeout(()=>{
-    //     this.update(obj);
-    //   },800)
-    //   return clearTimeout(timeout);
-    // }
   }
 }
 </script>
@@ -91,6 +86,10 @@ body::-webkit-scrollbar-track {
 }
 .CodeMirror{
   height: 100% !important;
+}
+.result{
+  background: #333;
+  margin: .25rem;
 }
 .result iframe{
   display: block;
