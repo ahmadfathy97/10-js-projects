@@ -1,0 +1,95 @@
+*{padding: 0;margin: 0;box-sizing: border-box;}
+:root{
+  --main-color: #6c63ff;
+  /*#d82134*/
+}
+body{
+  background: var(--main-color)
+}
+.container{
+  width: 95%;
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 1rem;
+  position: relative;
+}
+.container h1{
+  color: #f8f8f8;
+  text-align: center;
+  position: relative;
+  font-size: 6vmin;
+  font-family: fantasy;
+  font-weight: 400;
+  word-spacing: 7px;
+  letter-spacing: 3px;
+}
+.container h1:after{
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  height: 5px;
+  width: 60%;
+  background: #f8f8f8;
+}
+.vid-container{
+  margin: 30px auto;
+  position: relative;
+  min-height: 450px;
+  max-width: 900px;
+}
+.container .vid-container #video{
+  border: 2px solid #f8f8f8;
+  position: absolute;
+  width: 100%;
+  margin-bottom: 50px;
+  /*left: 50%;
+  transform: translate(-50%, 0);*/
+  display: block;
+}
+.container .vid-container canvas{
+  position: absolute;
+  /*left: 50%;
+  transform: translate(-50%, 0);*/
+}
+
+
+
+.marks-container{
+  background: #f8f8f8;
+  padding: .25rem;
+  border-radius: 5px;
+  position: fixed;
+  top: .5rem;
+  left: .5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.marks-container input{
+  cursor: pointer;
+}
+.marks-container label{
+  color: var(--main-color);
+  font-weight: 900;
+  font-size: 20px;
+  text-shadow: 0 0 1px #000;
+  margin: auto 3px;
+  cursor: pointer;
+}
+#msg{
+  background: #f28703;
+  color: #fff;
+  margin: 15px auto;
+  padding: .25rem .5rem;
+  border-radius: 10px;
+  box-shadow: 0 0 5px #f28703;
+  text-align: center;
+  font-size: 3vmin;
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translate(0, -50%);
+  z-index: 55;
+}
