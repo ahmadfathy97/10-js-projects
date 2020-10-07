@@ -13,12 +13,12 @@ function loadobject (mtlFile, objFile){
 
 function loading(mtlFile, objFile){
   let mtl = new THREE.MTLLoader()
-  mtl.setPath( '../3d/models/' );
+  mtl.setPath( '../models/' );
   mtl.load( mtlFile, function ( materials ) {
       materials.preload();
       new THREE.OBJLoader()
       .setMaterials( materials )
-      .setPath( '../3d/models/' )
+      .setPath( '../models/' )
       .load(objFile, function ( object ) {
           // object.position.y = -2;
           object.scale.x = .02;
