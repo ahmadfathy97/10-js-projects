@@ -1,5 +1,3 @@
-# 10 Projects Challenge
-I love to challenge myself so I decided to make 10 projects with different technologies as I could.
-1. ### Text Editor
-  * Vuejs
-  * codemirror
+# calculator
+
+> [Never use eval()!](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval#Never_use_eval!)

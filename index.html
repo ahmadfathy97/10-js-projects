@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+    <!-- I can't use eval if i write the ne -->
+    <!-- <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" /> -->
+    <link rel="stylesheet" href="assets/style.css">
+  </head>
+  <body>
+    <div id="result"></div>
+    <div class="calculator">
+      <input id="field" type="text" tabindex="-1" disabled />
+      <button tabindex="1" class="btn ctrls" id="clr">C</button>
+      <button tabindex="1" class="btn ctrls=" id="del">Del</button>
+      <button tabindex="1" class="btn op" disabled>%</button>
+      <button tabindex="1" class="btn num">7</button>
+      <button tabindex="1" class="btn num">8</button>
+      <button tabindex="1" class="btn num">9</button>
+      <button tabindex="1" class="btn op" disabled>/</button>
+      <button tabindex="1" class="btn num">4</button>
+      <button tabindex="1" class="btn num">5</button>
+      <button tabindex="1" class="btn num">6</button>
+      <button tabindex="1" class="btn op" disabled>*</button>
+      <button tabindex="1" class="btn num">1</button>
+      <button tabindex="1" class="btn num">2</button>
+      <button tabindex="1" class="btn num">3</button>
+      <button tabindex="1" class="btn op" id="subtract">-</button>
+      <button tabindex="1" class="btn num">0</button>
+      <button tabindex="1" class="btn" id="dot">.</button>
+      <button tabindex="1" class="btn ctrls" id="equal">=</button>
+      <button tabindex="1" class="btn op" disabled>+</button>
+    </div>
+
+    <!-- <div class="">
+      <a class="btn download" href="" download>Download</a>
+    </div> -->
+    <script src="assets/calculator.js"></script>
+
+  </body>
+</html>
