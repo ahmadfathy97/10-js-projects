@@ -10,5 +10,5 @@ I love to challenge myself so I decided to make 10 projects with different techn
 ### just smile [code](https://github.com/ahmadfathy97/10-projects-challenge/tree/face-recognition) |  [preview](https://just-smile.netlify.app/)
   * face-API
 
-### calculator [code](https://github.com/ahmadfathy97/10-projects-challenge/tree/calculator)
+### calculator [code](https://github.com/ahmadfathy97/10-projects-challenge/tree/calculator) | [download](https://github.com/ahmadfathy97/10-projects-challenge/releases/download/Calculator/calculator.Setup.1.0.0.exe)
   * electron
