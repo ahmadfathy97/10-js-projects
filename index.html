@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Space War</title>
+  <link rel="stylesheet" href="style/main.css">
+</head>
+<body>
+
+  <!-- start menu -->
+  <div class="d-flex-center" id="start-container">
+    <div class="wrapper d-flex-center">
+      <h1>Welcome To Space War</h1>
+      <button class="btn" id="start">Start</button>
+      <button class="btn d-flex-center help-btn" id="help-btn">?</button>
+    </div>
+  </div>
+
+  <!-- help menue -->
+  <div class="d-flex-center" id="help-container">
+    <div class="wrapper d-flex-center">
+      <h1>How To Play Space War </h1>
+      <div class="d-flex-center instruction">
+        <img src="../assets/arrows-keys.png" alt="">
+        <span> moves </span>
+      </div>
+      <div class="d-flex-center instruction">
+        <img src="../assets/ctrl-key.png" alt="">
+        <span> shoots </span>
+      </div>
+      <button class="btn" id="close-help">Close</button>
+    </div>
+  </div>
+
+  <!--  score -->
+  <p class="score-container"> Score: <span id="score"> 0</span></p>
+
+
+  <!-- game over container -->
+
+  <div class="d-flex-center" id="game-over-container">
+    <div class="wrapper d-flex-center">
+      <h1>Game Over</h1>
+      <h2>your score is: <span id="final-score">  </span></h2>
+      <button class="btn" id="reset">Play Again</button>
+      <button class="btn d-flex-center help-btn" id="help-btn">?</button>
+    </div>
+  </div>
+  <script src="js/libs/p5.min.js"></script>
+  <script src="js/libs/p5-sound.min.js"></script>
+
+  <script src="js/spaceship.js"></script>
+  <script src="js/meteor.js"></script>
+  <script src="js/laser.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

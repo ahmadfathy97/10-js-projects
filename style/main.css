@@ -1,0 +1,93 @@
+*{padding: 0;margin:0;box-sizing: border-box; font-family: tahoma,  cursive;}
+body{
+  min-height: 80vh;
+  background-image: url('../assets/earth.jpg');
+  background-size: cover;
+  background-position: center center;
+}
+.d-flex-center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.btn{
+  background: #222;
+  border: none;
+  padding: .25rem 1rem;
+  color: #ddd;
+  font-weight: 900;
+  font-size: 20px;
+  border-radius: 12px;
+  cursor: pointer;
+  margin: 2rem auto;
+  outline: none;
+}
+.btn:hover{
+  background: #444
+}
+.wrapper{
+  padding: 2rem 1rem;
+  border-radius: 15px;
+  background: #e8e8e8;
+}
+
+
+/*******/
+
+#start-container, #help-container, #game-over-container{
+  position: absolute;
+  width: 100%;min-height: 100vh;
+  top:0;left: 0;
+  background: rgba(0,0,0,.9);
+  z-index: 9999;
+}
+
+/***************/
+
+#help-container{
+  z-index: 99999;
+  display: none
+}
+.instruction{
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.instruction img{
+  width: 100px;
+  height: 80px;
+  margin: auto 10px;
+}
+.instruction span{
+  font-size: 20px;
+  font-weight: 800px;
+}
+#help-btn{
+  border-radius: 50%;
+  width: 30px;
+  padding: 0;margin: 0;
+  height: 30px;
+  background: #777;
+  z-index: 999999;
+}
+
+/**************/
+
+.score-container{
+  flex-direction: row;
+  position: fixed;
+  top:0;
+  left: 0;
+  width: 100%;
+  font-size: 30px;
+  color: #ddd;
+  text-align: left;
+}
+
+/***********/
+#game-over-container{
+  display: none;
+}
+#game-over-container .wrapper{
+  min-width: 350px;
+}
