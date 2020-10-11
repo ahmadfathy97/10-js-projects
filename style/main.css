@@ -24,12 +24,12 @@ h1:after{
   background: linear-gradient(90deg, #00f, #fd9d12, #ed1230, #0080aa);
 
 }
-.global-cases, .egypt-cases{
+.global-cases, .country-cases{
   padding: 1rem;
   max-width: 900px;
   margin: auto;
 }
-.egypt-container{
+.country-container{
   padding: 1rem;
   display: flex;
   align-items: center;
@@ -39,7 +39,7 @@ h1:after{
   max-width: 1400px;
   margin: auto;
 }
-.egypt-container>div{
+.country-container>div{
   margin: .5rem;
   width: calc(50% - 1rem);
   min-width: 380px;
@@ -49,12 +49,23 @@ canvas{
   border-radius: 15px;
   box-shadow: 0 0 10px #222;
 }
-.egypt-container div:first-child canvas{
+.country-container div:first-child canvas{
   background: #2d2e4d;
 }
-.egypt-container div:nth-of-type(2) canvas{
+.country-container div:nth-of-type(2) canvas{
   background: #699a68;
 }
-.egypt-container div:last-child canvas{
+.country-container div:last-child canvas{
   background: #a87575;
+}
+.slctbox{
+  display: block;
+  width: 90%;
+  padding: 1rem;
+  margin: 2rem auto;
+  text-align: center;
+  max-width: 600px;
+}
+.slctbox option{
+  text-align: center
 }

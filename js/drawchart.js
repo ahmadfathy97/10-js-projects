@@ -11,20 +11,31 @@ function drawChart(Canvas, labels, label, data, backgroundColor, type) {
     },
     options: {
       scales: {
-        yAxes: {
+        xAxes: [{
           gridLines: {
-            display:false
+              // display: false,
+              color: 'transparent',
+
+              zeroLineColor: '#ffcc33'
+          },
+          ticks: {
+            fontColor: "#fff"
+          },
+        }],
+        yAxes: [{
+            gridLines: {
+                // display: false,
+                color: 'transparent',
+                zeroLineColor: '#ffcc33'
+            },
+            ticks: {
+              fontColor: "#fff"
+            },
+        }],
+        legend: {
+          labels: {
+            fontColor: '#ddd'
           }
-        },
-        xAxes :{
-          gridLines: {
-            display:false
-          }
-        }
-      },
-      legend: {
-        labels: {
-          fontColor: '#ddd'
         }
       }
     }

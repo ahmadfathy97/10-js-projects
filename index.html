@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>covid19 - egypt cases</title>
+  <title>covid19 cases</title>
   <link rel="stylesheet" href="style/main.css">
 </head>
 <body>
@@ -13,13 +13,16 @@
     <h2>Global Cases</h2>
     <canvas id="global"></canvas>
   </div>
-  <div class="egypt-cases">
-    <h2>Egypt Cases</h2>
-    <canvas id="egypt"></canvas>
+
+  <select class="slctbox" name=""></select>
+
+  <div class="country-cases">
+    <h2><span class="country-name">Egypt</span> Cases</h2>
+    <canvas id="country"></canvas>
   </div>
 
-  <h1>last 10 days in Egypt</h1>
-  <div class="egypt-container">
+  <h1>last 10 days in <span class="country-name">Egypt</span></h1>
+  <div class="country-container">
     <div class="">
       <h2>Confirmed</h2>
       <canvas id="confirmed"></canvas>

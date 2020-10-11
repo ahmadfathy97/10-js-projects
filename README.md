@@ -1,1 +1,1 @@
-# covid-19 cases in Egypt
+# covid-19 cases
