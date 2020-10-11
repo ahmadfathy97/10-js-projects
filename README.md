@@ -16,5 +16,5 @@ I love to challenge myself so I decided to make 10 projects with different techn
 ### space war game [code](https://github.com/ahmadfathy97/10-projects-challenge/tree/space-war) | [preview](https://space-war2.netlify.app/)
   * p5.js
 
-### covid19-egypt-cases [code](https://github.com/ahmadfathy97/10-projects-challenge/tree/covid19-egypt-cases) | [preview](https://covid19-egypt-cases.netlify.app/)
+### covid19 cases [code](https://github.com/ahmadfathy97/10-projects-challenge/tree/covid19-egypt-cases) | [preview](https://covid19-egypt-cases.netlify.app/)
   * chart.js
