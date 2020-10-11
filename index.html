@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>covid19 - egypt cases</title>
+  <link rel="stylesheet" href="style/main.css">
+</head>
+<body>
+  <h1>Covid-19 Cases</h1>
+  <div class="global-cases">
+    <h2>Global Cases</h2>
+    <canvas id="global"></canvas>
+  </div>
+  <div class="egypt-cases">
+    <h2>Egypt Cases</h2>
+    <canvas id="egypt"></canvas>
+  </div>
+
+  <h1>last 10 days in Egypt</h1>
+  <div class="egypt-container">
+    <div class="">
+      <h2>Confirmed</h2>
+      <canvas id="confirmed"></canvas>
+    </div>
+    <div class="">
+      <h2>Recovered</h2>
+      <canvas id="recovered"></canvas>
+    </div>
+    <div class="">
+      <h2>Deaths</h2>
+      <canvas id="deaths"></canvas>
+    </div>
+  </div>
+  <script src="js/libs/chart.min.js"></script>
+  <script src="js/drawchart.js"></script>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
