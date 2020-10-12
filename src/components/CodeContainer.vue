@@ -1,6 +1,6 @@
 <template>
-  <div class="code-container">
-    <div class="header">
+  <div class="code-container" @dblclick="changeSize()" :class="{maximize: maximized}">
+    <div class="header" title="double click to change the size">
       <span>{{title | UpperCase}}</span>
     </div>
     <codemirror v-model="code" :options="cmOptions" @changes="updateResult($event)" />
@@ -26,6 +26,7 @@ export default {
   },
   data () {
     return {
+      maximized: true,
       code: '',
       cmOptions: {
         tabSize: 2,
@@ -40,11 +41,20 @@ export default {
   },
   props: ["title", "lang"],
   mounted(){
-    this.cmOptions.mode = this.lang
+    this.cmOptions.mode = this.lang;
+    this.code = window.localStorage.getItem(this.lang + 'Code') || ''
   },
   methods:{
     updateResult(e){
       this.$emit('update-result', {lang: e.doc.modeOption ,code: this.code});
+    },
+    changeSize(){
+      let maximizedElements = document.querySelectorAll('.maximize').length;
+      if(maximizedElements === 1){
+        this.maximized = true
+      } else{
+        this.maximized = !this.maximized
+      }
     }
   },
   filters:{
@@ -62,6 +72,8 @@ export default {
   border-radius: 15px 15px 0 0;
   box-shadow: 0 0 5px rgba(20,20,20,.6);
   overflow: hidden;
+  width: 80px;
+  height: 100%
 }
 .code-container .header{
   /*background: #444;*/
@@ -69,6 +81,10 @@ export default {
   color: #f8f8f8;
   font-size: 22px;
   border-radius: 15px 15px 0 0;
+  cursor: pointer
+}
+.maximize{
+  flex-grow: 1.5;
 }
 
 
