@@ -49,6 +49,10 @@ export default {
           <script>${this.javascript}<\/script>
         </html>
         `;
+        window.localStorage.setItem('xmlCode', this.xml)
+        window.localStorage.setItem('cssCode', this.css)
+        window.localStorage.setItem('javascriptCode', this.javascript)
+
       },300)
       return ()=> clearTimeout(timeout);
     }
@@ -74,13 +78,18 @@ body::-webkit-scrollbar-track {
 }
 
 .code{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: .25rem;
+  display: flex;
+  align-items: stretch;
+  align-content: space-around;
   padding: .25rem;
+  overflow: hidden;
+  min-height: 250px;
+  height: 320px;
+  max-height: 600px;
+  resize: vertical;
 }
 .vue-codemirror{
-  height: 300px;
+  height: 90%;
   padding: 5px;
 
 }
@@ -88,7 +97,6 @@ body::-webkit-scrollbar-track {
   height: 100% !important;
 }
 .result{
-  background: #333;
   margin: .25rem;
 }
 .result iframe{
