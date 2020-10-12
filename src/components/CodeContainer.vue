@@ -1,6 +1,6 @@
 <template>
-  <div class="code-container" @dblclick="changeSize()" :class="{maximize: maximized}">
-    <div class="header" title="double click to change the size">
+  <div class="code-container" :class="{maximize: maximized}">
+    <div class="header" @dblclick="changeSize()" title="double click to change the size">
       <span>{{title | UpperCase}}</span>
     </div>
     <codemirror v-model="code" :options="cmOptions" @changes="updateResult($event)" />
