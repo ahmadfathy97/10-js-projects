@@ -1,5 +1,6 @@
 {
-  "name": "Anti Bad Words",
+  "name": "twitter Anti Curse",
+  "description": "an extension that replace the curse word with some symbols",
   "version": "1.0.0",
   "manifest_version": 2,
   "browser_action": {
@@ -11,7 +12,7 @@
  },
   "content_scripts": [
     {
-      "matches": ["<all_urls>"],
+      "matches": ["*://twitter.com/*"],
       "js": ["index.js"],
       "css": ["main.css"]
     }
