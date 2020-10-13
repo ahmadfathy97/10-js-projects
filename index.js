@@ -1,4 +1,4 @@
-let badWords = ['fuck', 'dick', 'bitch', 'hore', 'shit'];
+let badWords = ['fuck', 'dick', 'bitch', 'hore', 'shit', 'slut', 'hooker', 'butt', 'asshole'];
 let regex = new RegExp(badWords.join('|'), 'gim');
 function AntiBadWords(){
   setInterval(function () {
