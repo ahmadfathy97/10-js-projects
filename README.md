@@ -1,3 +1,4 @@
+![10 js projects](10-js-projects-cover.png)
 # 10 JS Projects
 I love to challenge myself so I decided to make 10 projects with different technologies as I could.
 ### Text Editor [code](https://github.com/ahmadfathy97/10-js-projects/tree/text-editor) |  [preview](https://online-text-editor.netlify.app/)
@@ -18,3 +19,6 @@ I love to challenge myself so I decided to make 10 projects with different techn
 
 ### covid19 cases [code](https://github.com/ahmadfathy97/10-js-projects/tree/covid19-cases) | [preview](https://covid19-cases-charts.netlify.app/)
   * chart.js
+
+### Twitter Anti Curse (chrome extension) [code](https://github.com/ahmadfathy97/10-js-projects/tree/anti-bad-words)
+  * javaScript
