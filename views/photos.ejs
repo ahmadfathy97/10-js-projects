@@ -1,0 +1,63 @@
+<%- include('header') %>
+  <div class="container">
+    <div class="row photos-container">
+
+    </div>
+  </div>
+  <script>
+  let photosContainer = document.querySelector('.photos-container');
+  let page = 1, finished = false;
+  window.addEventListener('load', addMorePhotos);
+  window.addEventListener('scroll', onScroll);
+  function onScroll() {
+    if ((window.innerHeight + window.pageYOffset) >= document.body.offsetHeight){
+      page += 1;
+      this.addMorePhotos();
+    }
+  }
+  function addMorePhotos() {
+    if(!finished){
+      fetch(`/photos/pages?page=${page}`)
+      .then(res => res.json())
+      .then((data)=>{
+        if(data && data.photos && data.photos.length){
+          data.photos.forEach(photo =>{
+            photosContainer.innerHTML +=
+            `
+              <div class="col-md-4 p-1">
+                <div class="shadow py-2 px-1">
+                  <a href="/photos/${photo._id}">
+                    <img loading="lazy" width="100%" height="300" src="${photo.image}" alt="${photo.title}">
+                  </a>
+                  <div class="d-flex justify-content-between alig-items-center">
+                    <h3><a href="/photos/${photo._id}">${photo.title}</a></h3>
+                    <span>
+                      <svg height="18" viewBox="0 0 24 24" width="20" >
+                        <g>
+                          <path d="m12 21c-5.196 0-9.815-3.067-11.767-7.814-.31-.753-.31-1.618 0-2.371 1.952-4.748 6.571-7.815 11.767-7.815s9.815 3.067 11.767 7.814c.31.753.31 1.618 0 2.371-1.952 4.748-6.571 7.815-11.767 7.815zm0-17c-4.789 0-9.045 2.824-10.842 7.194-.21.512-.21 1.099 0 1.611 1.797 4.371 6.053 7.195 10.842 7.195s9.045-2.824 10.842-7.194c.21-.512.21-1.099 0-1.611-1.797-4.371-6.053-7.195-10.842-7.195z"/>
+                        </g>
+                        <g>
+                          <path d="m12 16c-2.206 0-4-1.794-4-4s1.794-4 4-4 4 1.794 4 4-1.794 4-4 4zm0-7c-1.654 0-3 1.346-3 3s1.346 3 3 3 3-1.346 3-3-1.346-3-3-3z"/>
+                        </g>
+                      </svg>
+                      ${photo.views}
+                    </span>
+                  </div>
+                </div>
+              </div>
+            `
+          })
+        } else{
+          finished = true;
+          photosContainer.innerHTML += `
+            <p class="col-md-12 alert alert-danger text-center">there are no more photos</p>
+          `
+        }
+
+      }).catch((err)=>{
+        console.log(err);
+      })
+    }
+  }
+  </script>
+<%- include('footer') %>

@@ -1,0 +1,28 @@
+<%- include('header') %>
+  <div class="container">
+    <% if(session.user) { %>
+      <div class="row">
+        <% if(errors){ errors.forEach(err=>{ %>
+          <span class="alert alert-danger"> <%= err.msg %></span>
+        <% }) } %>
+      </div>
+    <% } %>
+    <h1 class="mt-4"><%= photo.title %></h1>
+    <div class="row">
+    <img class="col-md-12 p-1" loading="lazy"  src="<%= photo.image %>" alt="<%= photo.title %>">
+    <div class="col-md-12 d-flex justify-content-between alig-items-center m-2">
+      <a href="/users/<%= photo.user_id._id %>"><%= photo.user_id.username %></a>
+      <span>
+        <svg height="18" viewBox="0 0 24 24" width="20" >
+          <g>
+            <path d="m12 21c-5.196 0-9.815-3.067-11.767-7.814-.31-.753-.31-1.618 0-2.371 1.952-4.748 6.571-7.815 11.767-7.815s9.815 3.067 11.767 7.814c.31.753.31 1.618 0 2.371-1.952 4.748-6.571 7.815-11.767 7.815zm0-17c-4.789 0-9.045 2.824-10.842 7.194-.21.512-.21 1.099 0 1.611 1.797 4.371 6.053 7.195 10.842 7.195s9.045-2.824 10.842-7.194c.21-.512.21-1.099 0-1.611-1.797-4.371-6.053-7.195-10.842-7.195z"/>
+          </g>
+          <g>
+            <path d="m12 16c-2.206 0-4-1.794-4-4s1.794-4 4-4 4 1.794 4 4-1.794 4-4 4zm0-7c-1.654 0-3 1.346-3 3s1.346 3 3 3 3-1.346 3-3-1.346-3-3-3z"/>
+          </g>
+        </svg>
+        <%= photo.views %>
+      </span>
+    </div>
+  </div>
+<%- include('footer') %>

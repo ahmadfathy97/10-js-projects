@@ -1,0 +1,16 @@
+<% if(session.user){ %>
+  <script>
+    document.querySelector('#logout').onclick = ()=>{
+      fetch('/auth/logout', {
+        method: 'POST'
+      }).then(()=>{
+        window.location.href=
+        '/auth/login'
+      })
+    }
+  </script>
+<% } %>
+
+
+</body>
+</html>

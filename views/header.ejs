@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title><%= title || 'Photo Gallery' %></title>
+  <link rel="stylesheet" href="/style/bootstrap.min.css">
+  <style media="screen">
+    *{padding: 0;margin: 0;box-sizing: border-box;}
+    body{
+      background: #f8f8f8;
+    }
+    nav{
+      padding: .25rem;
+      position: fixed;
+      top:0;left: 0;
+      width: 100%;
+      z-index: 99999;
+    }
+    nav ul{
+      list-style-type: none;
+      margin: 0;
+    }
+    nav ul li{
+      list-style-type: none;
+      padding: .5rem
+    }
+    .container{
+      margin: 80px auto;
+    }
+  </style>
+</head>
+<body>
+  <nav class="bg-secondary">
+    <ul class="d-flex align-items-center justify-content-between">
+      <li><a class="text-light" href="/">HOME</a></li>
+      <%if(!session.user) {%>
+        <li>
+          <a class="text-light mr-2" href="/auth/signup">Sign Up</a>
+          <a class="text-light" href="/auth/login">Login</a>
+        </li>
+      <% } %>
+      <%if(session.user) {%>
+        <li class="rounded bg-dark">
+          <a class="text-light" href="/users/<%= session.user._id %>">
+            <img class="rounded-circle "src="<%= session.user.pic%>" width="30" height="30" alt="avatar">
+            <span><%= session.user.username %></span>
+          </a>
+        </li>
+        <li><button class="btn btn-danger" id="logout">Logout</button></li>
+      <% } %>
+    </ul>
+  </nav>
