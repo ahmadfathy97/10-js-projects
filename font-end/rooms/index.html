@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>socket.io</title>
+  <link rel="stylesheet" href="../style/bootstrap.min.css">
+  <link rel="stylesheet" href="../style/main.css">
+</head>
+<body>
+  <div class="container">
+    <div class="row min-vh-100 d-flex justify-content-center align-items-center">
+      <div class="col-md-8 shadow mx-auto">
+        <h1>
+          <span class="text-primary"id="chat-name"></span>
+          <a href="/" id="Leave-btn" class="btn btn-danger my-1 float-right">Leave</a>
+          <div class="clearfix"></div>
+        </h1>
+        <h5 >online: <span id="onlines"></span></h5>
+        <div class="chat-container">
+          <ul class="border my-1 p-1" id="msgs"></ul>
+        </div>
+        <div class="form-group">
+          <textarea class="form-control" id="msg-body" rows="4" ></textarea>
+          <button id="send-btn" class="btn btn-primary my-1">Send</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.1/socket.io.min.js" integrity="sha512-/WwtKR6NnHomLo0O4w9QKc1INTPEJs7ko6u2aBTA1paPldhPl8LtXsi7a35iEZ69+9P5dcgVNESG8hrP4Y2t3w==" crossorigin="anonymous"></script>
+  <script src="../js/room.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>socket.io</title>
+  <link rel="stylesheet" href="style/bootstrap.min.css">
+  <link rel="stylesheet" href="style/main.css">
+</head>
+<body>
+  <div class="container">
+    <div class="row min-vh-100 d-flex justify-content-center align-items-center">
+      <div class="col-md-8 shadow mx-auto">
+        <h1>New Room</h1>
+        <form id="room-form"  method="POST">
+          <div class="form-group">
+            <label>Room Name</label>
+            <input class="form-control" id="room-name" required />
+          </div>
+          <div class="form-group">
+            <label>username</label>
+            <input class="form-control" id="username" required />
+          </div>
+          <div class="form-group">
+            <button id="new-room" type="submit" class="btn btn-primary my-1 float-right">New Room</button>
+            <div class="clearfix"></div>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </div>
+  <script src="js/main.js"></script>
+</body>
+</html>

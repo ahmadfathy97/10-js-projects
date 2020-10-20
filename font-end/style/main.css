@@ -1,0 +1,11 @@
+#msgs{
+  list-style-type: none;
+  height: 400px;
+  overflow: auto;
+}
+#msgs li{
+  margin: .5rem .25rem;
+  padding: .5rem;
+  background: #eee;
+  word-wrap: break-word;
+}
