@@ -11,7 +11,7 @@ let addUsernameBtn = slctelem('#add-username');
 let username = window.localStorage.getItem('chat-username') || 'anonymous';
 
 msgBody.addEventListener('focus', ()=>{
-  if(!window.localStorage.getItem('caht-username')){
+  if(!window.localStorage.getItem('chat-username')){
     console.log(54545);
     usernameModal.style.display = 'flex ';
   }
@@ -20,8 +20,8 @@ msgBody.addEventListener('focus', ()=>{
 addUsernameBtn.addEventListener('click', ()=>{
   if(usernameInput.value.trim().length > 0){
     usernameModal.style.display = 'none';
-    window.localStorage.setItem('caht-username', usernameInput.value);
-    username = window.localStorage.getItem('caht-username')
+    window.localStorage.setItem('chat-username', usernameInput.value);
+    username = window.localStorage.getItem('chat-username')
   }
 })
 
