@@ -20,7 +20,7 @@ I love to challenge myself so I decided to make 10 projects with different techn
 ### covid19 cases [code](https://github.com/ahmadfathy97/10-js-projects/tree/covid19-cases) | [preview](https://covid19-cases-charts.netlify.app/)
   * chart.js
 
-### Twitter Anti Curse (chrome extension) [code](https://github.com/ahmadfathy97/10-js-projects/tree/anti-bad-words)
+### Twitter Anti Curse (browser extension) [code](https://github.com/ahmadfathy97/10-js-projects/tree/anti-bad-words)
   * javaScript
 
 ### photos gallery [code](https://github.com/ahmadfathy97/10-js-projects/tree/photos-gallery) | [preview](https://photos-gallery-preview.herokuapp.com/)
@@ -28,3 +28,7 @@ I love to challenge myself so I decided to make 10 projects with different techn
   * mongodb
   * cloudinary cloud
   * ejs preprocessor
+
+### chat app [code](https://github.com/ahmadfathy97/10-js-projects/tree/chat-app) | [preview](https://chat-app-test.netlify.app/)
+  * expressjs
+  * socket.io
