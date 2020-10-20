@@ -8,7 +8,7 @@ let sendBtn = slctelem("#send-btn");
 let usernameModal = slctelem("#username-modal");
 let usernameInput = slctelem('#username');
 let addUsernameBtn = slctelem('#add-username');
-let username = 'anonymous';
+let username = window.localStorage.getItem('chat-username') || 'anonymous';
 
 msgBody.addEventListener('focus', ()=>{
   if(!window.localStorage.getItem('caht-username')){
