@@ -9,3 +9,7 @@
   background: #eee;
   word-wrap: break-word;
 }
+#username-modal{
+  background: rgba(255, 255, 255, .8);
+  display: none;
+}

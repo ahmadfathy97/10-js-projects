@@ -5,11 +5,27 @@ let onlines = slctelem("#onlines");
 let msgs = slctelem("#msgs");
 let msgBody = slctelem("#msg-body");
 let sendBtn = slctelem("#send-btn");
+let usernameModal = slctelem("#username-modal");
+let usernameInput = slctelem('#username');
+let addUsernameBtn = slctelem('#add-username');
+let username = 'anonymous';
 
+msgBody.addEventListener('focus', ()=>{
+  if(!window.localStorage.getItem('caht-username')){
+    console.log(54545);
+    usernameModal.style.display = 'flex ';
+  }
+})
 
+addUsernameBtn.addEventListener('click', ()=>{
+  if(usernameInput.value.trim().length > 0){
+    usernameModal.style.display = 'none';
+    window.localStorage.setItem('caht-username', usernameInput.value);
+    username = window.localStorage.getItem('caht-username')
+  }
+})
 
 let room = new URLSearchParams(document.location.search.substring(1)).get("room");
-let username = window.localStorage.getItem('chat-username') || 'anonymous'
 console.log(room);
 chatName.textContent = room
 socket.emit('join-room', {username, room});
