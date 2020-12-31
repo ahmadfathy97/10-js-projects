@@ -1,0 +1,28 @@
+{
+  "name": "jokes",
+  "main": "main.js",
+  "version": "1.0.0",
+  "description": "A native application built with NativeScript-Vue",
+  "author": "Ahmad Fathy",
+  "license": "MIT",
+  "dependencies": {
+    "@vue/devtools": "^5.3.3",
+    "nativescript-socketio": "^3.3.1",
+    "nativescript-vue-devtools": "^1.4.0",
+    "nativescript-toasty": "^3.0.0-alpha.2",
+    "@nativescript/theme": "^2.3.3",
+    "nativescript-vue": "^2.8.1",
+    "@nativescript/core": "^7.0.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/preset-env": "^7.11.5",
+    "@nativescript/android": "7.0.1",
+    "@nativescript/webpack": "^3.0.4",
+    "babel-loader": "^8.1.0",
+    "nativescript-vue-template-compiler": "^2.8.1",
+    "nativescript-worker-loader": "~0.12.1",
+    "sass": "^1.26.10",
+    "vue-loader": "^15.9.3"
+  }
+}
