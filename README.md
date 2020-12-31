@@ -32,3 +32,7 @@ I love to challenge myself so I decided to make 10 projects with different techn
 ### chat app [code](https://github.com/ahmadfathy97/10-js-projects/tree/chat-app) | [preview](https://chat-app-test.netlify.app/)
   * expressjs
   * socket.io
+
+### jokes mobile app [code](https://github.com/ahmadfathy97/10-js-projects/tree/jokes-app) | [dwonload](#)
+  * NativeScript
+  * VueJs
