@@ -1,4 +1,9 @@
 # jokes
+![splash](screenshots/splash.jpg)
+![home](screenshots/homw.jpg)
+![about](screenshots/about.jpeg)
+![jokes](screenshots/jokes.jpg)
+
 
 > A native application built with NativeScript-Vue
 
