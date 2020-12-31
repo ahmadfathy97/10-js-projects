@@ -4,7 +4,7 @@
       <NavigationButton text="<" android.systemIcon="ic_menu_back" @tap="$navigateBack()" />
     </ActionBar>
     <ScrollView>
-      <Label v-if="err" :text="err" />
+      <Label v-if="err" text="something went wrong 😢" />
       <Label v-if="!loaded" style="font-size:40px margin: 40px auto" text="Loading..." />
       <ListView v-if="!err" for="joke in jokes">
         <v-template>
@@ -60,6 +60,6 @@ export default {
     color: #f8f8f8;
   }
   .item{
-    font-size: 28px;
+    font-size: 20px;
   }
 </style>

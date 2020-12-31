@@ -3,15 +3,15 @@
     <ActionBar>
       <StackLayout orientation="horizontal">
         <Label text="Jokes" width="80%" fontSize="24" verticalAlignment="left" />
-        <Label text="☺" width="20%" fontSize="24" verticalAlignment="right" @tap="goToAbout()" />
+        <Label text="👨" width="20%" fontSize="24" textAlign="right" verticalAlignment="right" @tap="goToAbout()" />
       </StackLayout>
     </ActionBar>
     <StackLayout>
-      <Image src="res://icon" width="120" height="120" style="margin: 50px auto" />
-      <ListView for="type in jokesTypes">
+      <Image src="res://logo" width="120" height="180" style="margin: 50px auto" />
+      <ListView for="(type, i) in jokesTypes">
         <v-template>
           <FlexboxLayout flexDirection="row">
-            <Label style="width: 100%" class="item" alignSelf="center" :text="type" @tap="gotToJokeType(type)" />
+            <Label style="width: 100%" :background="colors[i]" class="item" alignSelf="center" :text="type" @tap="gotToJokeType(type)" />
           </FlexboxLayout>
         </v-template>
       </ListView>
@@ -25,7 +25,8 @@ import About from './About.vue'
   export default {
     data() {
       return {
-        jokesTypes: ["Programming", "Dark", "Misc", "Pun", "Spooky", "Christmas"]
+        jokesTypes: ["Programming", "Dark", "Misc", "Pun", "Spooky", "Christmas"],
+        colors: ["#6C63FF", "#0099ff", "#ff80aa", "#751aff", "#d99744", "#0800ff"]
       }
     },
     methods:{
