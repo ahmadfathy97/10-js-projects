@@ -45,7 +45,7 @@ controller.PostSignUp = (req, res)=>{
               pic = result.secure_url;
               bcrypt.genSalt(10, (err, salt) => {
                 bcrypt.hash(password, salt, (err, hash) => {
-                  if (err) res.render('signup', {title: 'sign up', error: err});
+                  if (err) res.render('signup', {title: 'sign up', errors: [{msg:err}]});
                   password = hash;
                   Users({
                     username, email, password, info, pic
@@ -63,19 +63,19 @@ controller.PostSignUp = (req, res)=>{
         fs.unlink(req.file.path, (err)=>{
           console.log(err);
         });
+        let imgToArr = pic.split('/');
+        let img = imgToArr[imgToArr.length-1];
+        ///destroy('just the name of the image without extention')
+        cloudinary.uploader.destroy(img.split('.')[0] ,{ invalidate: true }, function(result) {
+         });
       }
-      let imgToArr = pic.split('/');
-      let img = imgToArr[imgToArr.length-1];
-      ///destroy('just the name of the image without extention')
-      cloudinary.uploader.destroy(img.split('.')[0] ,{ invalidate: true }, function(result) {
-         res.json(result);
-         res.render('signup', {title: 'sign up', errors})
-       });
+      res.render('signup', {title: 'sign up', errors})
     }
   } else{
     // res.json({msg: 'you are already logged in log out to sign up'})
   }
 }
+
 
 
 controller.GetLogin = (req, res)=>{
