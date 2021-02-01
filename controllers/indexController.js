@@ -22,19 +22,23 @@ controller.Home = async(req, res)=>{
   await res.render('home', {title: 'Home', latest, mostViewed, errors: ''});
 }
 
-controller.UploadImage = (req, res)=>{
+controller.UploadImage = async(req, res)=>{
   let errors = [];
   let image;
   let {title, description} = req.body;
   if(!title || !req.file){
     errors.push({msg: "all fields are required"});
-    Photo.find({})
+    let latest = await Photo.find({})
     .sort({_id: -1})
-    .limit(12)
-    .populate('user_id')
-    .exec((err, images)=>{
-      res.render('home', {title: 'home', images, errors});
-    })
+    .limit(6)
+    .populate('user_id');
+
+    let mostViewed = await Photo.find({})
+    .sort({views: -1})
+    .limit(6)
+    .populate('user_id');
+
+    await res.render('home', {title: 'Home', latest, mostViewed, errors});
   }
   if(!errors.length){
     cloudinary.uploader.upload(req.file.path, function(result, err) {
